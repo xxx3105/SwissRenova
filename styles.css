@@ -1,0 +1,377 @@
+body {
+  font-family: 'Helvetica', sans-serif;
+  background-color: var(--logo-l-color);
+}
+
+:root {
+  --logo-l-color: #4d5ae5;
+  --logo-r-color: #2e2f42;
+  --contact-color: #434455;
+  --center-color: #ffffff;
+  --but-color: #4d5ae5;
+  --logo-f-color: #f4f4fd;
+  --button2-color: #404bbf;
+  --last-abz-color: #e7e9fc;
+  --ramka-cutomer-color: #8e8f99;
+  --tochki-color: #424355;
+  --foote-hoover: #31d0aa;
+  --belii-modal: #fcfcfc;
+  --mod-color: rgb(46, 47, 66, 0.2);
+}
+
+/* COMMON  */
+
+.container {
+    max-width: 1200px;  
+    margin: 0 auto; 
+    background: rgba(221, 221, 221, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+     position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
+ 
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+li,
+a,
+header {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+ html {
+  scroll-padding-top: 120px; /* Учитываем высоту вашей фиксированной навигации */
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Растягивает видео на весь экран */
+    z-index: -1; /* Видео уходит под контент */
+}
+
+/* CONTENT */
+
+.headerstil{
+     background-color: rgba(221, 221, 221, 0.3);
+     padding: 13px 0 15px 20px;
+     border-radius: 10px;
+}
+
+.swiss-symbol {
+  color: white;
+  padding: 0 7px 0 7px;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  background-color: red;
+}
+
+/* NAV  BLOCK */
+
+.container-oben{
+  position: fixed;
+}
+
+.headerblockfixlogo{
+  position: absolute;  
+  width: 1180px;
+  z-index: 1000;  
+}
+
+.headerblockfixnav{
+ position: absolute;  
+  top: -2px;
+  width: 866px;
+  left: 300px;
+  z-index: 1000;  
+}
+
+.headerblockfixnav a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #000; /* Цвет текста */
+}
+
+.headerblockfixnav div {
+    display: inline-block;
+    padding: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Плавное изменение фона */
+    border-radius: 5px;
+}
+
+.headerblockfixnav div:hover {
+    background-color: rgba(241, 0, 0, 0.5); /* Сероватый фон при наведении */
+    border-radius: 5px;
+    color: white;
+}
+nav {
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  gap: 20px; /* Отступы между элементами */
+  background-color: rgba(221, 221, 221, 0.9);
+  padding: 5px;
+  margin-top: 15px;
+  border-radius: 10px;
+  font-size: large;
+}
+
+.mainstil {
+ padding: 150px;
+}
+
+.blockofsiteerste {
+  margin: 70px auto 0 auto; 
+  width: 55%; 
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  hyphens: auto;
+  text-align: justify;
+  transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
+  border-radius: 5px;
+  padding: 20px 50px 20px 50px;
+ border: 0.2px solid gray; 
+}
+ 
+
+.blockofsite {
+  margin: 0 auto; 
+  width: 55%; 
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  hyphens: auto;
+  text-align: justify;
+  transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
+  border-radius: 5px;
+  padding: 20px 50px 20px 50px;
+   border: 0.2px solid gray;
+}
+
+.blockofsiteungerade {
+   background-color: rgba(169, 169, 169, 0.5);
+ }
+ 
+.blockofsiteerste:hover,
+.blockofsite:hover, 
+.blockofsiteungerade:hover {
+    opacity: 1; /* Полностью непрозрачный при наведении */
+    background-color: rgba(255, 255, 255, 0.8);; /* Делаем фон полностью непрозрачным */
+    border-radius: 5px;
+}
+
+
+
+/* TEAM */
+#team {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.team-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 100%;
+    height: 250px; /* Задаем фиксированную высоту */
+    object-fit: cover; /* Обрезает изображение, сохраняя пропорции */
+    border-radius: 10px;
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
+
+.team-member p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* SERVICES */
+ 
+.listlinks{
+margin-left: 20px;
+}
+
+
+/* PROJECTS */
+ 
+.project-description {
+   margin-top: 25px;
+}
+ 
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  
+  margin: 0 auto; 
+  width: 55%; 
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  hyphens: auto;
+  text-align: justify;
+  transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
+  border-radius: 5px;
+  padding: 20px 50px 20px 50px;
+
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1px;
+}
+
+.project-item {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-item-top-right{
+border-top-right-radius: 5px;
+}
+
+.project-item-bottom-right{
+  border-bottom-left-radius: 5px;
+}
+
+.project-item-bottom-left{
+  border-bottom-right-radius: 5px;
+}
+
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+     
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.arrow:hover {
+    color: #000;
+}
+
+ /* Wie arbeiten wir */
+
+.blockofsite-howwework {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 10px;
+max-width: 90%;
+padding: 20px;
+}
+
+.step {
+width: 200px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 15px;
+background: gray;
+color: white;
+border-radius: 10px;
+text-align: center;
+}
+ 
+.arrow, .checkmark {
+font-size: 24px;
+color: #333;
+flex: 0 0 auto;
+}
+
+.checkmark {
+color: #28a745;
+}
+
+/* FOOTER */
+
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.footer-bottom p {
+  font-size: 14px;
+  margin-top: 10px;
+}
