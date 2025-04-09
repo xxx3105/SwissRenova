@@ -1,6 +1,7 @@
 body {
   font-family: 'Helvetica', sans-serif;
-  background-color: var(--logo-l-color);
+  /* background-color: var(--logo-l-color); */
+  margin: 0;
 }
 
 :root {
@@ -25,7 +26,7 @@ body {
     max-width: 1200px;  
     margin: 0 auto; 
     background: rgba(221, 221, 221, 0.5);
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 15px;
      position: relative;
 }
@@ -71,12 +72,27 @@ header {
     z-index: -1; /* Видео уходит под контент */
 }
 
+  .background {
+    background-image: url('./img/img_0291_1920.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
 /* CONTENT */
 
 .headerstil{
-     background-color: rgba(221, 221, 221, 0.3);
+     /* background-color: rgba(221, 221, 221, 0.3); */
+     background-color: white;
+     border: 1px solid #000;
      padding: 13px 0 15px 20px;
      border-radius: 10px;
+     
 }
 
 .swiss-symbol {
@@ -91,12 +107,13 @@ header {
 
 .container-oben{
   position: fixed;
-}
+ }
 
 .headerblockfixlogo{
   position: absolute;  
   width: 1180px;
   z-index: 1000;  
+  
 }
 
 .headerblockfixnav{
@@ -105,6 +122,7 @@ header {
   width: 866px;
   left: 300px;
   z-index: 1000;  
+  
 }
 
 .headerblockfixnav a {
@@ -129,7 +147,7 @@ nav {
   display: flex;
   justify-content: center; /* Центрирование по горизонтали */
   gap: 20px; /* Отступы между элементами */
-  background-color: rgba(221, 221, 221, 0.9);
+  /* background-color: rgba(221, 221, 221, 0.9); */
   padding: 5px;
   margin-top: 15px;
   border-radius: 10px;
@@ -147,10 +165,11 @@ nav {
   line-height: 1.6;
   hyphens: auto;
   text-align: justify;
-  transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
+  /* transition: opacity 2s ease; Плавное изменение прозрачности */
   border-radius: 5px;
   padding: 20px 50px 20px 50px;
- border: 0.2px solid gray; 
+  /* border: 0.2px solid gray;  */
+   background-color: white;
 }
  
 
@@ -164,22 +183,22 @@ nav {
   transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
   border-radius: 5px;
   padding: 20px 50px 20px 50px;
-   border: 0.2px solid gray;
+  /* border: 0.2px solid gray; */
+  background-color: white;
 }
 
 .blockofsiteungerade {
-   background-color: rgba(169, 169, 169, 0.5);
+   background-color: white;
  }
  
 .blockofsiteerste:hover,
-.blockofsite:hover, 
+.blockofsite:hover,
 .blockofsiteungerade:hover {
     opacity: 1; /* Полностью непрозрачный при наведении */
-    background-color: rgba(255, 255, 255, 0.8);; /* Делаем фон полностью непрозрачным */
-    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(28, 25, 25, 0.2); /* Тень для эффекта поднятия */
+    border-bottom-right-radius:  0px solid #000; /* Видимый бордер */
+    border-right: 0px solid #000; /* Видимый бордер */; 
 }
-
-
 
 /* TEAM */
 #team {
@@ -207,10 +226,13 @@ nav {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    border: 1px solid gray ;
 }
 
 .team-member:hover {
-    transform: translateY(-5px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Тень для эффекта поднятия */
+    border-bottom-right-radius:  0px solid #000; /* Видимый бордер */
+    border-right: 0px solid #000; /* Видимый бордер */; 
 }
 
 .team-member img {
