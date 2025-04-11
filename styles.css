@@ -22,13 +22,61 @@ body {
 
 /* COMMON  */
 
-.container {
+/* .container {
     max-width: 1200px;  
     margin: 0 auto; 
     background: rgba(221, 221, 221, 0.5);
-    /* padding: 20px; */
+ 
     border-radius: 15px;
      position: relative;
+} */
+
+.container {
+  max-width: 1200px;  
+  margin: 0 auto;
+  background: rgba(221, 221, 221, 0.5);
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden; /* скрывает все, что выходит за границы контейнера */
+  width: 0;
+  height: 0;
+  opacity: 0;
+  animation: openContainer 1s ease-in-out forwards; /* анимация при загрузке */
+}
+
+/* Содержимое контейнера */
+.content {
+  padding: 20px;
+}
+
+/* Кнопка (если понадобится) */
+.toggle-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Анимация для раскрытия контейнера */
+@keyframes openContainer {
+  0% {
+    width: 30%;
+    height: 10%;
+    opacity: 0;
+  }
+ 
+  100% {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
 }
 
 h1,
@@ -56,6 +104,11 @@ header {
   padding: 0;
   margin: 0;
   color: inherit;
+}
+
+h1 a {
+  text-decoration: none; /* убрать подчёркивание */
+  color: inherit;         /* унаследовать цвет от родителя (обычно чёрный или заданный в h1) */
 }
 
  html {
@@ -107,6 +160,7 @@ header {
 
 .container-oben{
   position: fixed;
+   z-index: 1000;  
  }
 
 .headerblockfixlogo{
@@ -118,7 +172,7 @@ header {
 
 .headerblockfixnav{
  position: absolute;  
-  top: -2px;
+  top: -5px;
   width: 866px;
   left: 300px;
   z-index: 500;  
@@ -131,18 +185,38 @@ header {
 }
 
 .headerblockfixnav div {
-    display: inline-block;
-    padding: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Плавное изменение фона */
-    border-radius: 5px;
+ display: inline-block;
+ padding: 10px 0; /* Добавьте отступы, если необходимо */
+ cursor: pointer;
+ transition: background-color 0.3s ease; /* Плавное изменение фона */
+ border-radius: 5px;
+ color: black; /* Начальный цвет текста */
+ position: relative; 
+}
+ 
+/* Эффект при наведении */
+.headerblockfixnav div:hover {
+  color: darkred; /* Меняем цвет текста на darkred при наведении */
 }
 
-.headerblockfixnav div:hover {
-    background-color: darkred;
-    border-radius: 5px;
-    color: white;
+/* Псевдоэлемент для линии снизу */
+.headerblockfixnav div::after {
+  content: ''; /* Создаём пустое содержимое для псевдоэлемента */
+  position: absolute;
+  bottom: 0; /* Линия будет располагаться внизу элемента */
+  left: 0;
+  width: 0; /* Начальная ширина линии 0 */
+  height: 4px; /* Толщина линии */
+  background-color: darkred; /* Цвет линии */
+  transition: width 0.4s ease; /* Плавное расширение линии */
 }
+
+/* При наведении на элемент растягиваем линию */
+.headerblockfixnav div:hover::after {
+  width: 100%; /* Линия растягивается на всю ширину блока */
+}
+
+
 nav {
   display: flex;
   justify-content: center; /* Центрирование по горизонтали */
@@ -169,50 +243,99 @@ nav {
   background-color: red;
 }
 
-.sloganhauptzentrum{
+
+.swiss-symbol-zentrum {
+  display: inline-block;
+  color: white;
+  padding: 0 14px;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  background-color: red;
+  transition: transform 0.5s ease-out;
+}
+
+
+/* ROTATION */
+
+.swiss-symbol-zentrum:hover {
+  transform: rotate(180deg); /* резкое вращение */
+  /* transition: transform 0.1s ease-in; быстро при наведении */
+}
+
+/* LINIEN */
+.slogan-zentrum {
+  position: relative;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  z-index: 500; /* Убедитесь, что слоган не накрывает меню */
+}
+ 
+/* Слоган */
+.sloganhauptzentrum {
   font-family: 'Helvetica', sans-serif;
   font-size: 56px;
 }
- 
-.slogan-zentrum {
-width: fit-content;
-text-align: center;
-top: 250px;
-max-width: 1200px;  
-margin: 0 auto; 
-position: relative;
-z-index: 10;
-}
 
 .slogan {
-font-size: 35px;
-color: #000;
-margin-top: 16px;
+  font-size: 35px;
+  color: #000;
+  margin-top: 15px;
 }
 
 .call-button {
-display: inline-block;
-margin-top: 40px;
-padding: 12px 25px;
-background-color: red;
-color: white;
-font-weight: bold;
-border: none;
-border-radius: 5px;
-text-decoration: none;
-font-size: 18px;
-transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.call-button:hover {
+  background-color: darkred;
+}
+
+/* Стиль для линий */
+
+
+
+/* Слоган */
+.sloganhauptzentrum {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 56px;
+}
+
+ .call-button:hover {
+  background-color: darkred;
+}
+  
+ .slogan-zentrum {
+width: fit-content;
+text-align: center;
+/* top: 210px; */
+max-width: 1200px;  
+margin: 200px auto 0 auto; 
+/* position: relative; */
+z-index: 10;
 }
 
 .call-button:hover {
 background-color: darkred;
 }
+ 
 
 /* Haupttext  */
 
 
 .blockofsiteerste {
-  margin: 580px auto 0 auto; 
+  margin: 185px auto 0 auto; 
   width: 55%; 
   letter-spacing: 0.5px;
   line-height: 1.6;
@@ -223,9 +346,9 @@ background-color: darkred;
   padding: 20px 50px 20px 50px;
   /* border: 0.2px solid gray;  */
    background-color: white;
+   
 }
  
-
 .blockofsite {
   margin: 0 auto; 
   width: 55%; 
@@ -396,7 +519,7 @@ padding: 20px;
 }
 
 .step {
-width: 200px;
+width: 220px;
 height: 30px;
 display: flex;
 align-items: center;
@@ -406,6 +529,12 @@ background: gray;
 color: white;
 border-radius: 10px;
 text-align: center;
+}
+
+.step:hover {
+  color: darkred;  
+  font-weight: 700;
+
 }
  
 .arrow, .checkmark {
@@ -423,10 +552,9 @@ color: #28a745;
 
 footer {
   background-color: white;
-  padding: 20px;
   text-align: center;
   border: 1px solid black;
-   border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
@@ -451,10 +579,16 @@ footer a:hover {
 }
 
 .position-footer{
-text-align: center;
+  text-align: center;
+  padding: 15px 0;
   position: fixed;
   bottom: 0;
   left: auto;
-  width: 61%;
+  max-width: 1200px;
+  width: 100%;
   z-index: 1000; /* чтобы футер всегда был сверху */
+}
+
+.contact-info{
+line-height: 1.8;
 }
