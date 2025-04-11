@@ -72,7 +72,7 @@ header {
     z-index: -1; /* Видео уходит под контент */
 }
 
-  .background {
+  /* .background {
     background-image: url('./img/img_0291_1920.jpg');
     background-size: cover;
     background-position: center;
@@ -82,7 +82,7 @@ header {
     top: 0;
     left: 0;
     z-index: -1;
-  }
+  } */
 
 /* CONTENT */
 
@@ -91,9 +91,9 @@ header {
      background-color: white;
      border: 1px solid #000;
      padding: 13px 0 15px 20px;
-     border-radius: 10px;
-     
-}
+     border-bottom-right-radius: 10px;
+     border-bottom-left-radius: 10px;
+     }
 
 .swiss-symbol {
   color: white;
@@ -139,7 +139,7 @@ header {
 }
 
 .headerblockfixnav div:hover {
-    background-color: rgba(241, 0, 0, 0.5); /* Сероватый фон при наведении */
+    background-color: darkred;
     border-radius: 5px;
     color: white;
 }
@@ -156,10 +156,63 @@ nav {
 
 .mainstil {
  padding: 150px;
+
 }
 
+/* Zentral Slogan */
+
+.swiss-symbol-zentrum{
+
+   color: white;
+  padding: 0 14px 0 14px;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  background-color: red;
+}
+
+.sloganhauptzentrum{
+  font-family: 'Helvetica', sans-serif;
+  font-size: 56px;
+}
+ 
+.slogan-zentrum {
+width: fit-content;
+text-align: center;
+top: 180px;
+max-width: 1200px;  
+margin: 0 auto; 
+position: relative;
+}
+
+.slogan {
+font-size: 35px;
+color: #000;
+margin-top: 16px;
+}
+
+.call-button {
+display: inline-block;
+margin-top: 40px;
+padding: 12px 25px;
+background-color: red;
+color: white;
+font-weight: bold;
+border: none;
+border-radius: 5px;
+text-decoration: none;
+font-size: 18px;
+transition: background-color 0.3s ease;
+}
+
+.call-button:hover {
+background-color: darkred;
+}
+
+/* Haupttext  */
+
+
 .blockofsiteerste {
-  margin: 70px auto 0 auto; 
+  margin: 550px auto 0 auto; 
   width: 55%; 
   letter-spacing: 0.5px;
   line-height: 1.6;
@@ -372,10 +425,12 @@ color: #28a745;
 
 footer {
   background-color: #333;
-  color: white;
+  background-color: white;
   padding: 20px;
   text-align: center;
-  border-radius: 10px;
+ 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 footer a {
@@ -396,4 +451,13 @@ footer a:hover {
 .footer-bottom p {
   font-size: 14px;
   margin-top: 10px;
+}
+
+.position-footer{
+text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  width: 61%;
+  z-index: 1000; /* чтобы футер всегда был сверху */
 }
