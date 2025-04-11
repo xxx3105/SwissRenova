@@ -112,7 +112,7 @@ header {
 .headerblockfixlogo{
   position: absolute;  
   width: 1180px;
-  z-index: 1000;  
+  z-index: 500;  
   
 }
 
@@ -121,7 +121,7 @@ header {
   top: -2px;
   width: 866px;
   left: 300px;
-  z-index: 1000;  
+  z-index: 500;  
   
 }
 
@@ -162,8 +162,7 @@ nav {
 /* Zentral Slogan */
 
 .swiss-symbol-zentrum{
-
-   color: white;
+  color: white;
   padding: 0 14px 0 14px;
   font-family: 'Helvetica', sans-serif;
   font-weight: bold;
@@ -178,10 +177,11 @@ nav {
 .slogan-zentrum {
 width: fit-content;
 text-align: center;
-top: 180px;
+top: 250px;
 max-width: 1200px;  
 margin: 0 auto; 
 position: relative;
+z-index: 10;
 }
 
 .slogan {
@@ -212,7 +212,7 @@ background-color: darkred;
 
 
 .blockofsiteerste {
-  margin: 550px auto 0 auto; 
+  margin: 580px auto 0 auto; 
   width: 55%; 
   letter-spacing: 0.5px;
   line-height: 1.6;
@@ -355,11 +355,9 @@ margin-left: 20px;
 .project-item-top-right{
 border-top-right-radius: 5px;
 }
-
 .project-item-bottom-right{
   border-bottom-left-radius: 5px;
 }
-
 .project-item-bottom-left{
   border-bottom-right-radius: 5px;
 }
@@ -424,12 +422,11 @@ color: #28a745;
 
 
 footer {
-  background-color: #333;
   background-color: white;
   padding: 20px;
   text-align: center;
- 
-  border-top-left-radius: 10px;
+  border: 1px solid black;
+   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
