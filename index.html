@@ -19,7 +19,21 @@
 <div class="container-oben">
 
 <header class="headerstil headerblockfixlogo">
-<h1 class="headerlogohandy"> <span class="swiss-symbol">+</span> <a href="#intro">SwissRenova</a> </h1> 
+
+<div class="header-flex">
+   
+<img class="hamburger" src="/img/icons/menu.svg" alt="SVG File" width="50" height="50">
+<img class="crosshamburger hide" src="/img/icons/cross.svg" alt="SVG File" width="50" height="50">
+
+
+
+      <!-- Логотип -->
+      <h1 class="headerlogohandy">
+        <span class="swiss-symbol">+</span>
+        <a href="#intro">SwissRenova</a>
+      </h1>
+    </div>
+
 
 </header>
 
@@ -32,8 +46,23 @@
 <a href="#how-we-work"><div>Wie wir arbeiten</div></a>
 <a href="#contacts"><div>Kontakt</div></a>
 <a href="#contacts"><div>DE</div></a>
+
+
  
 </nav>
+
+<div class="square-menu">
+    <div class="menu">
+        <a href="#home"><div>Startseite</div></a>
+        <a href="#about"><div>Team</div></a>
+        <a href="#services"><div>Dienstleistungen</div></a>
+        <a href="#projects"><div>Projekte</div></a>
+        <a href="#equipment"><div>Werkzeuge</div></a>
+        <a href="#how-we-work"><div>Wie wir arbeiten</div></a>
+        <a href="#contacts"><div>Kontakt</div></a>
+        <a href="#contacts"><div>DE</div></a>
+    </div>
+</div>
  
 </div>
 
@@ -78,7 +107,7 @@
   <br>
   <p>
     Weitere Informationen finden Sie in unserer Unternehmenspräsentation, die
-   <a href="./files/Presentation-uber-SwissRenova-21.04.25.pdf">hier herunterladen</a> werden kann.
+   <a href="./files/Präsentation über SwissRenova.pdf"> <strong><u>hier herunterladen</u></strong></a> werden kann.
   </p>
   <br>
   <p>
@@ -124,7 +153,7 @@
         <div class="team-member">
             <img src="./img/team/person5.jpg" alt="Член команды">
             <h3>Александр Гриневский</h3>
-            <p>Ничегонеделатель</p>
+            <p>Expert im Bau</p>
         </div> -->
         </div>
     <br>
@@ -133,48 +162,72 @@
 <br><br>
 
 <section >
+ 
+
 <div class="blockofsite blockofsiteungerade">
     <h2 id="services">Unsere Leistungen im Überblick</h2>
     <br>
- 
-  <div class="">
-        <h3>Wohnungsbau</h3>
-          <ul class="listlinks">
-            <li>Neubau von Wohnhäusern </li>
-            <li>Sanierung und Renovierung </li>
-            <li>Wärmedämmung </li>
-            <li>Fenster- und Türenmontage</li>
-        </ul>
+
+    <div class="service-block">
+        <div class="service-text">
+            <h3>Wohnungsbau</h3>
+            <ul class="listlinks">
+                <li>Neubau von Wohnhäusern</li>
+                <li>Sanierung und Renovierung</li>
+                <li>Wärmedämmung</li>
+                <li>Fenster- und Türenmontage</li>
+            </ul>
+        </div>
+        <div class="service-image first-image">
+            <img src="img/icons/hausbild1.png" alt="Wohnungsbau">
+        </div>
     </div>
 
-    <div class="">
-        <h3>Innenausbau im Industrie- und Wohnungsbau</h3>
-        <ul class="listlinks">
-            <li>Trockenbau </li>
-            <li>Bodenbeläge </li>
-            <li>Malerarbeiten </li>
-            <li>Verputzarbeiten </li>
-            <li>Fliessenarbeiten</li>
-        </ul>
+    <div class="service-block">
+        <div class="service-text">
+            <h3>Innenausbau im Industrie- und Wohnungsbau</h3>
+            <ul class="listlinks">
+                <li>Trockenbau</li>
+                <li>Bodenbeläge</li>
+                <li>Malerarbeiten</li>
+                <li>Verputzarbeiten</li>
+                <li>Fliessenarbeiten</li>
+            </ul>
+        </div>
+        <div class="service-image second-image">
+            <img src="img/icons/hausbild2.png" alt="Innenausbau">
+        </div>
     </div>
 
-    <div class="">
-        <h3>Garten- und Landschaftsbau</h3>
-          <ul class="listlinks">
-            <li>Gartenbau </li>
-            <li>Pflasterarbeiten</li>
-            <li>Begrünung</li>
-        </ul>
+    <div class="service-block">
+        <div class="service-text">
+            <h3>Garten- und Landschaftsbau</h3>
+            <ul class="listlinks">
+                <li>Gartenbau</li>
+                <li>Pflasterarbeiten</li>
+                <li>Begrünung</li>
+            </ul>
+        </div>
+        <div class="service-image">
+            <img src="img/icons/hausbild3.png" alt="Garten- und Landschaftsbau">
+        </div>
     </div>
 
-    <div class="">
-        <h3>Elektroinstallation</h3>
-          <ul class="listlinks">
-            <li>Elektroinstallation der Geräte</li>
-        </ul>
-    </div> 
-<br>
+    <div class="service-block">
+        <div class="service-text">
+            <h3>Elektroinstallation</h3>
+            <ul class="listlinks">
+                <li>Elektroinstallation der Geräte</li>
+            </ul>
+        </div>
+        <div class="service-image">
+            <img src="img/icons/hausbild4.png" alt="Elektroinstallation">
+        </div>
+    </div>
+
+    <br>
 </div>
+
 
 </section>
 <br>
@@ -195,11 +248,17 @@
               <button class="arrow right-arrow">&#9655;</button>
         </div>
         <p class="project-description">
+<strong>Beschreibung:</strong>
+
                     Projekt zur Verlegung von Keramikfliesen auf dem Balkon eines Einfamilienhauses in der Gemeinde Oberuzwil und der angrenzenden Fläche.
 Auf einer Fläche von 32 m² wurden folgende Arbeiten durchgeführt: Entfernung alter Farbanstriche, Grundierung der Oberfläche, Abdichtung, Verlegung der Fliesen, Verfugung sowie Versiegelung der Anschlussfugen.
+                    <br><br>
+                    <strong>Hashtags: </strong> <u>#Fliesenarbeiten</u> <u>#Abdichtung</u> <u>#Balkonverlegung</u>
+                    <br>                
                     <br>
-                    <br>
-                    <a href="https://viewer.autodesk.com/id/dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YTM2MHZpZXdlci1wcm90ZWN0ZWQvdDE3NDMxMTY5MTVfOTZkMjU3MGMtMTQwNy00NmU5LWI3MDItYzMxZjM4MjljYjM2Lm1heA?sheetId=ZDE1NmUwYjMtYTllZC00N2QyLWE2NjktOTdjOWUwMGI2MmQ0"> 3D-Modell ansehen.</a>
+
+ <a href="https://viewer.autodesk.com/id/dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YTM2MHZpZXdlci1wcm90ZWN0ZWQvdDE3NDMxMTY5MTVfOTZkMjU3MGMtMTQwNy00NmU5LWI3MDItYzMxZjM4MjljYjM2Lm1heA?sheetId=ZDE1NmUwYjMtYTllZC00N2QyLWE2NjktOTdjOWUwMGI2MmQ0"> <strong><u>3D-Modell ansehen.</u></strong></a> 
+                    
                 </p>
     </div>
 </section>
@@ -258,13 +317,14 @@ Auf einer Fläche von 32 m² wurden folgende Arbeiten durchgeführt: Entfernung 
 <div class="blockofsite blockofsiteungerade">
     <h2>Kontakte:</h2>
 <br>
- <p><strong>Unterhnehmen:</strong> SwissRenova KlG</p>
+ <p><strong>Unterhnehmen:</strong> SwissRenovaKlG</p>
   <p><strong>Adresse:</strong> Grüntalstrasse 15b 9300 Wittenbach</p>
-  <p><strong>Telefonnummer:</strong> <a href="tel:+41 79 510 42 46">+41 79 510 42 46</a></p>
+  <p><strong>Telefonnummer:</strong> <a href="tel:+41 79 510 42 46">+41(79)5104246</a></p>
   <p><strong>E-Mail:</strong> <a href="mailto:info.swissrenova@gmail.com">info.swissrenova@gmail.com</a></p>
   <p><strong>UID-Nummer:</strong> CHE-224.429.412</p>
   <p><strong>Gesellschafter:</strong> Kehl Benjamin, Hrynevskyi Vladyslav</p>
-  <br>
+  
+  <a href="tel:+41791234567" class="call-button-handy">Anrufen  +41 79 510 42 46 </a>
 </div>
 <br>
 <br>
@@ -289,5 +349,8 @@ Auf einer Fläche von 32 m² wurden folgende Arbeiten durchgeführt: Entfernung 
 </footer>
 
 </div>
+
+<script src="/script.js"></script>
+
 </body>
 </html>

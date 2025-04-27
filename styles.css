@@ -121,7 +121,7 @@ ul, li, a {
 }
 
 .headerblockfixlogo {
-  width: 1180px;
+  width: 1200px;
 }
 
 .headerblockfixnav {
@@ -157,6 +157,48 @@ ul, li, a {
 .headerblockfixnav div:hover::after {
   width: 100%;
 }
+
+/* SLIDER MENU */
+
+.crosshamburger {
+ 
+  transition: opacity 0.3s ease;
+}
+
+.hide {
+  opacity: 0;  /* Прячем элемент */
+  pointer-events: none;  /* Чтобы элемент не мешал кликам */
+  display: none;
+}
+
+.hamburger {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+   position: absolute;
+}
+
+/* Показ и скрытие меню */
+.square-menu {
+  visibility: hidden;  /* Скрыт по умолчанию */
+  opacity: 0;
+  transform: translateX(-100%);  /* Меню начинает сдвигаться за левый край экрана */
+  transition: opacity 1s ease, transform 1s ease, visibility 0s 1s;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.square-menu.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);  /* Меню двигается в позицию по умолчанию */
+}
+
+/* Иконка крестика скрыта по умолчанию */
+  
+
 
 /* Flex-Navigation (fallback) */
 nav {
@@ -219,6 +261,8 @@ nav {
   transition: background-color 0.3s;
 }
 
+.call-button-handy{ display: none;}
+
 .call-button:hover {
   background-color: darkred;
 }
@@ -247,6 +291,43 @@ nav {
   opacity: 1;
   box-shadow: 5px 5px 10px rgba(28, 25, 25, 0.2);
 }
+
+
+/* Dienstleistungen */
+
+.service-block {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.service-text {
+    flex: 1;
+text-align: le;
+}
+
+.service-image {
+    flex: 0 0 150px;
+    margin-left: 0;
+    display: flex;             /* превращаем в флекс-блок */
+    justify-content: center;   /* горизонтальное центрирование */
+    align-items: center;       /* вертикальное центрирование */
+}
+
+.first-image{
+  margin-top: 3%;
+}
+
+.second-image{
+  margin-top: 10%;
+}
+
+.service-image img {
+  width: 110px;
+  height: 96px;
+}
+
+
 
 /* Team-Sektion */
 #team {
@@ -454,14 +535,18 @@ footer {
   margin: 100px auto;
 }
 
-
  .blockofsite, .blockofsiteerste, .blockofsiteungerade {
-  width: 96%;
-  margin: 10% auto;
+  width: 100%;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  text-align:left;
+
 }
 
 .headerblockfixlogo{
  width: 100%;
+ 
 }
  
 .container-oben {
@@ -470,7 +555,8 @@ text-align: right;
 }
 
 .headerlogohandy{
-  margin-right: 15px;
+  margin-right: 2%;
+
 }
 
 .headerblockfixnav {
@@ -500,5 +586,146 @@ margin: 0 auto;
   margin: 70% auto 115%;
 }
 
+
+.header-flex {
+  display: flex;
+  align-items: center;  /* Выравнивание по вертикали */
+  justify-content: space-between;  /* Пространство между элементами */
+  width: 100%;  /* Чтобы контейнер занимал всю ширину */
+} 
+
+.service-image{
+  display: none;
+  
+}
+
+
+/* Projects */
+
+.project-grid {
+  display: block;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  gap: 1px;
+}
+
+ 
+ .arrow {
+    display: none;
+  }
+
+  .checkmark
+  {display: none;}
+ 
+  .project-item:nth-child(n+2) {
+    display: none;
+  }
+
+
+/* MENU NAV */
+ 
+
+/* Меню, которое выезжает */
+.square-menu {
+  visibility: hidden;  /* Скрыт по умолчанию */
+  opacity: 0;
+  transform: translateX(-100%);  /* Меню начинает сдвигаться за левый край экрана */
+  transition: opacity 1s ease, transform 1s ease, visibility 0s 1s; /* Плавная анимация изменения прозрачности и сдвига */
+  background-color: rgba(0, 0, 0, 0.2); /* Легкий затемняющий фон */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100%;
+  
+}
+
+.square-menu.show {
+  visibility: visible;  /* Показываем меню */
+  opacity: 1;
+  transform: translateX(0);  /* Меню двигается в позицию по умолчанию */
+  transition: opacity 1s ease, transform 1s ease; /* Убираем задержку для visibility */
+}
+
+/* Меню */
+.square-menu .menu {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Тень для эффекта */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2%;
+  margin-top: 15%;
+}
+
+/* Ссылки в меню */
+.square-menu .menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 32px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+   text-align: left;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Эффект наведения на ссылки */
+.square-menu .menu a:hover {
+  background-color: #f0f0f0;
+}
+
+ .hamburger {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+ position: relative;
+}
+
+
+.call-button-handy{
+  
+ 
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  background-color: red;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+ 
+}
+
+
+}
+
+
+
+@media (max-width: 376px) {
+ 
+.square-menu .menu {
+  height: 96vh;
+  gap: 0;
+}
+
+}
+
+@media (max-width: 360px) {
+ 
+.square-menu .menu {
+  height: 84vh;
+  margin-top: 75px;
+  
+}
 
 }
