@@ -705,6 +705,14 @@ margin: 0 auto;
 }
 
 
+ .team-member{
+  width: 280px;
+ }
+
+ .nameofpart{
+  font-size: 30px;
+ }
+
 }
 
 
