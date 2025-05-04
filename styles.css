@@ -519,7 +519,7 @@ footer {
   }
 
   .headerstil {
-padding: 5px;
+padding: 12px;
 
   }
 
@@ -548,7 +548,7 @@ nav {
   left: 0;
   font-size: 18px;
   
-  margin-top: 4%;
+  margin-top: 6%;
   width: 100%;
   justify-content: center;
   background-color: #ffffff;
