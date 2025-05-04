@@ -523,11 +523,20 @@ padding: 5px;
 
   }
 
-.headerblockfixlogo{
+/* .headerblockfixlogo{
 width: 100%;
 justify-items: center;
 justify-content: center;
 border-radius: 0;
+} */
+
+
+.headerblockfixlogo {
+    display: grid;
+    justify-items: center; /* Центрирует по горизонтали */
+    align-items: center; /* Центрирует по вертикали */
+    width: 100%;
+    border-radius: 0;
 }
 
 nav {
