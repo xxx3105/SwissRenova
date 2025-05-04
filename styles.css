@@ -508,11 +508,55 @@ footer {
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
+   
+     
   }
 
   .content, .sidebar {
     width: 100%;
   }
+
+  .headerstil {
+padding: 5px;
+
+  }
+
+.headerblockfixlogo{
+width: 768px;
+justify-items: center;
+border-radius: 0;
+}
+
+nav {
+   gap: 10px;
+    
+  }
+
+.headerblockfixnav{
+  left: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 6%;
+  width: 100%;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 5px 12px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+
+
+
+}
+
+
+
+
+
 
 }
 
