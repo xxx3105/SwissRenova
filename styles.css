@@ -540,14 +540,14 @@ border-radius: 0;
 }
 
 nav {
-   gap: 12px;
+   gap: 2%;
     
   }
 
 .headerblockfixnav{
   left: 0;
-  font-size: 18px;
-  
+  /* font-size: 20px; */
+  /* font-weight: 500; */
   margin-top: 6%;
   width: 100%;
   justify-content: center;
@@ -570,6 +570,9 @@ nav {
 
 }
 
+.blockofsiteerste{
+  margin-top: 70%;
+}
 
 
 
