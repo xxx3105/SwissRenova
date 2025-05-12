@@ -32,6 +32,8 @@ body {
   margin: 0;
 }
 
+.specialtext{line-height: 1.2;}
+
 /* Container mit Aufklapp-Animation */
 .container {
   max-width: 1200px;
@@ -179,6 +181,7 @@ ul, li, a {
   opacity: 0;
   transition: opacity 0.3s ease;
    position: absolute;
+   display: none;
 }
 
 /* Показ и скрытие меню */
@@ -524,7 +527,7 @@ footer {
   }
 
   .headerstil {
-padding: 12px;
+padding: 19px;
 
   }
 
@@ -752,7 +755,9 @@ margin: 0 auto;
  .hamburger {
   opacity: 1;
   transition: opacity 0.3s ease;
- position: relative;
+   position: relative;
+   display:inline;
+
 }
 
 

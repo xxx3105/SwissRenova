@@ -83,7 +83,8 @@ const menuLinks = document.querySelectorAll('.square-menu .menu a');  // Все 
 
 // Обработчик для гамбургера
 hamburger.addEventListener('click', () => {
-  hamburger.classList.add('hide');
+hamburger.classList.add('hide');
+    hamburger.style.display = 'none';
   crosshamburger.classList.remove('hide');
   squareMenu.classList.add('show');  // Показываем меню
 });
@@ -92,7 +93,8 @@ hamburger.addEventListener('click', () => {
 crosshamburger.addEventListener('click', () => {
   hamburger.classList.remove('hide');
   crosshamburger.classList.add('hide');
-  squareMenu.classList.remove('show');  // Скрываем меню
+    squareMenu.classList.remove('show');  // Скрываем меню
+     hamburger.style.display = 'block';
 });
 
 // Обработчик для всех ссылок в меню
@@ -101,5 +103,6 @@ menuLinks.forEach(link => {
     hamburger.classList.remove('hide');  // Показываем гамбургер
     crosshamburger.classList.add('hide');  // Скрываем крестик
     squareMenu.classList.remove('show');  // Скрываем меню
+     hamburger.style.display = 'block';
   });
 });
