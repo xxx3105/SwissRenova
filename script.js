@@ -100,9 +100,11 @@ crosshamburger.addEventListener('click', () => {
 // Обработчик для всех ссылок в меню
 menuLinks.forEach(link => {
   link.addEventListener('click', () => {
-    hamburger.classList.remove('hide');  // Показываем гамбургер
-    crosshamburger.classList.add('hide');  // Скрываем крестик
     squareMenu.classList.remove('show');  // Скрываем меню
-     hamburger.style.display = 'block';
+    crosshamburger.classList.add('hide');
+    hamburger.classList.remove('hide');  // Показываем гамбургер
+    hamburger.style.display = 'inline';
+    hamburger.style.display = 'block';
+  hamburger.classList.add('show');
   });
 });
